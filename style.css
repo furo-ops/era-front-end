@@ -8,13 +8,16 @@
 }
 
 ::selection {
-  background: #87cd33;
+  background: #2a00ff;
   color: white;
 }
-
+.title-header{
+  font-family: "Chaviera", sans-serif;
+  text-align: center;
+}
 body {
   overflow: hidden;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-family: "Cabin Condensed", sans-serif;
 }
 
 h1 { font-size: 5rem }
@@ -38,9 +41,14 @@ li {
 }
 
 header {height: 100vh}
-footer {height: 50vh}
+footer {
+  font-size: larger;
+  font-weight: bold;
+  float: left;
+  height: 50vh;
+}
 
-:any-link { color: #4e9815; }
+:any-link { color: #2a00ff; }
 
 .df {display: flex}
 .aic {align-items: center}
@@ -67,9 +75,92 @@ footer {height: 50vh}
 .demo-gallery:not(.last) {
   padding-bottom: 1rem;
 }
-
 .demo-text .text {
-  font-size: clamp(8rem, 15vw, 16rem);
+  padding-bottom: 20px;
+  font-size: clamp(3rem, 7vw, 7rem); /* Adjust the minimum and maximum values as needed */
+  font-family: "Chaviera", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   line-height: 1;
-  font-weight: 900;
+  white-space: nowrap; /* Ensures text stays in a single line */
+  /* Remove any overflow properties if you had them */
 }
+
+
+@media only screen and (max-width: 600px) { /* This is just an example breakpoint */
+  .demo-text .text {
+    font-size: smaller; /* Adjust the font size for smaller screens */
+  }
+}
+
+
+/* Countdown */
+
+#timer {
+  font-family: "Cabin Condensed", sans-serif;
+  text-align: center;
+  font-size: 3em;
+  font-weight: 100;
+  color: rgb(0, 0, 0);
+  text-shadow: 0 0 1px #000000;
+}
+#timer div {
+  display: inline-block;
+  min-width: 90px;
+}
+#timer div span {
+  color: #000000;
+  display: block;
+  font-size: 0.35em;
+  font-weight: 400;
+}
+
+/* NEWSLETTER */
+/* Remove default button appearance */
+.submit-btn {
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: #000; /* Set the text color to black or as needed */
+  font-family: "Cabin Condensed", sans-serif;
+  font-size: 1rem; /* Set the size as needed */
+  font-weight: bold; /* If the text is bold */
+  text-transform: uppercase; /* If the text is uppercase */
+  padding: 10px 20px; /* Adjust padding to match the first image */
+  cursor: pointer; /* To indicate the button is clickable */
+  outline: none; /* To remove the default focus outline */
+}
+
+/* Add custom styles for active state */
+.submit-btn:active {
+  background: #e0e0e0; /* Example active background color */
+  /* Other active styles as needed */
+}
+
+/* NAVIGATION AND UL LI *//* Side navigation styles */
+.side-navigation {
+  position: fixed;
+  top: auto; /* Remove the top property */
+  bottom: 0; /* Align the bottom edge with the bottom of the viewport */
+  transform: translateY(0); /* Remove the transform */
+  z-index: 10; /* Ensure it's above other content */
+}
+
+.side-navigation ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.side-navigation ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black; /* Or the color you prefer */
+  /* Add more styling as per your design */
+}
+
+/* Styles for the rest of the content */
+/* Add your existing styles here */
+
+
+/* You can add more styles as needed */
