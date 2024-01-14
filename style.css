@@ -35,10 +35,12 @@ ul {
 }
 
 li {
-  flex-shrink: 0;
-  width: clamp(500px, 60vw, 800px);
+  /* Allow shrinking if necessary */
+  flex-shrink: 1;
+  width: clamp(300px, 60vw, 800px);
   padding-right: 1rem;
 }
+
 
 header {height: 100vh}
 footer {
@@ -140,11 +142,11 @@ footer {
 /* NAVIGATION AND UL LI *//* Side navigation styles */
 .side-navigation {
   position: fixed;
-  top: auto; /* Remove the top property */
-  bottom: 0; /* Align the bottom edge with the bottom of the viewport */
-  transform: translateY(0); /* Remove the transform */
-  z-index: 10; /* Ensure it's above other content */
+  bottom: 0;
+  z-index: 10;
+  /* Set a max-height if needed or padding to the parent element */
 }
+
 
 .side-navigation ul {
   list-style-type: none;
@@ -152,15 +154,70 @@ footer {
 }
 
 .side-navigation ul li a {
+  padding-top: 0 !important;
   display: block;
   padding: 10px;
   text-decoration: none;
   color: black; /* Or the color you prefer */
-  /* Add more styling as per your design */
 }
 
-/* Styles for the rest of the content */
-/* Add your existing styles here */
+/* Bubbles text images */
+
+.images-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-container {
+  flex: 1;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.left-image {
+  padding: 1rem;
+  text-align: left;
+}
+
+.right-image {
+  padding: 1rem;
+  text-align: right;
+}
+
+img {
+background-color: #0000;
+}
+
+.image-text-container {
+  position: relative;
+  display: inline-block; /* or flex depending on your layout */
+}
+
+.image-text-container img {
+  width: 100%; /* Adjust as needed */
+  height: auto; /* Adjust as needed */
+}
+
+.text-overlay {
+  font-family: "Chaviera", sans-serif;
+  color: black; /* or any color you want for the text */
+  font-size: 2rem; /* Adjust as needed */
+  font-weight: bold; /* Adjust as needed */
+}
 
 
-/* You can add more styles as needed */
+/* COOKIES */
+button{
+  background-color: white!important;
+}
+ 
+.freeprivacypolicy.com--nb {
+  font-family: 'Cabin Condensed';
+}
+.cc-nb-changep{
+  display: none;
+}

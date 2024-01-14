@@ -61,13 +61,17 @@ setInterval('updateTimer()', 1000 );
 
 
 // NAVIGATION AND UL LI SCROLL SMOOTH 
-// Optional: JavaScript for smooth scrolling (if browser support is insufficient)
 document.querySelectorAll('.side-navigation a').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
+    // Check if the anchor's href attribute is an internal link
+    if (this.getAttribute('href').startsWith('#')) {
+      e.preventDefault(); // Prevent default only for internal links
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+    // For external links, do nothing, allow the default behavior
   });
 });
+
 
