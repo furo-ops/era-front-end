@@ -205,7 +205,7 @@ background-color: #0000;
 .text-overlay {
   font-family: "Chaviera", sans-serif;
   color: black; /* or any color you want for the text */
-  font-size: 2rem; /* Adjust as needed */
+  font-size: 1rem; /* Adjust as needed */
   font-weight: bold; /* Adjust as needed */
 }
 
