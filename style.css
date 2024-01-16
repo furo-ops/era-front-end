@@ -1,6 +1,11 @@
 :root { font-size: 16px }
 @media (max-width: 500px) { :root { font-size: 14px } }
-
+@font-face {
+  font-family: 'Chaviera';
+  src: url('chavieraregular-d9pwz.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -203,7 +208,7 @@ background-color: #0000;
 }
 
 .text-overlay {
-  font-family: "Chaviera", sans-serif;
+  font-family: "Chaviera", sans-serif!important;
   color: black; /* or any color you want for the text */
   font-size: 1rem; /* Adjust as needed */
   font-weight: bold; /* Adjust as needed */
