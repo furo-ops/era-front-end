@@ -36,7 +36,7 @@ imagesLoaded(images, { background: true }, function() {
 
 ////COUNTDOWN
 function updateTimer() {
-  future  = Date.parse("February 01, 2024 20:00:00");
+  future  = Date.parse("February 19, 2024 00:00:00");
   now     = new Date();
   diff    = future - now;
 
